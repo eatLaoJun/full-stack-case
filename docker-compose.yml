@@ -6,6 +6,8 @@ services:
       dockerfile: backend/Dockerfile
     ports:
       - "3434:3434"
+    networks:
+      - webnet
   
   frontend:
     build:
@@ -13,3 +15,8 @@ services:
       dockerfile: frontend/Dockerfile
     ports:
       - "8080:80"
+    networks:
+      - webnet
+
+networks:
+  webnet:
