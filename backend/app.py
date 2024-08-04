@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-DATABASE_URL = os.getenv('DATABASE_URL', 'default_database_url')
+DATABASE_URL = os.getenv('DATABASE_URL', 'default_database_url2')
 API_KEY = os.getenv('API_KEY', 'default_api_key')
 
 @app.route('/api/hello')
