@@ -4,21 +4,29 @@ services:
     build:
       context: .
       dockerfile: backend/Dockerfile
-    # ports:
-    #   - "3434:3434"
+    ports:
+      - "3434:3434"
     networks:
       - webnet
   
   frontend:
     build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    ports:
-      - "3005:80" 
+      context: .
+      dockerfile: frontend/Dockerfile
     networks:
       - webnet
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+    ports:
+      - "3004:80"
     depends_on:
       - backend
+      - frontend
+    networks:
+      - webnet
 
 networks:
   webnet:
