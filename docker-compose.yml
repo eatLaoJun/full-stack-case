@@ -11,10 +11,10 @@ services:
   
   frontend:
     build:
-      context: ./frontend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: frontend/Dockerfile
     ports:
-      - "3005:80" 
+      - "3005:80"  
     networks:
       - webnet
     depends_on:
