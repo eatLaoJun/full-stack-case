@@ -53,6 +53,15 @@
                     console.error('Error:', error);
                     document.getElementById('api-message').textContent = 'Error fetching message';
                 });
+            
+            fetch('/api/env')
+            .then(response => response.json())
+            .then(data => {
+                console.log('data>>>', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         }
     </script>
 </body>
