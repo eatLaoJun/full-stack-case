@@ -44,7 +44,7 @@
 
     <script>
         function fetchMessage() {
-            fetch('http://backend:3434/api/hello')
+            fetch('/api/hello')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('api-message').textContent = data.message;
