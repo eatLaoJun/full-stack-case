@@ -6,10 +6,12 @@ services:
       dockerfile: backend/Dockerfile
     ports:
       - "3434:3434"
-    volumes:
-      - .env:/app/.env 
+    # volumes:
+    #   - .env:/app/.env 
     # environment:      
     #   - API_KEY=bbbb
+    env_file:
+      - .env
     networks:
       - webnet
   
