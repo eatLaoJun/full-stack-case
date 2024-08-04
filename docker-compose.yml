@@ -13,8 +13,6 @@ services:
     build:
       context: .
       dockerfile: frontend/Dockerfile
-    ports:
-      - "3001:80"
     networks:
       - webnet
 
