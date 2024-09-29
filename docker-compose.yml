@@ -8,8 +8,8 @@ services:
       - "3434:3434"
     volumes:
       - .env:/app/.env 
-    environment:      
-      - API_KEY=bbbb
+    # environment:      
+    #   - API_KEY=bbbb
     env_file:
       - .env
     networks:
