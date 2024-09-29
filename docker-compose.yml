@@ -7,7 +7,7 @@ services:
     ports:
       - "3434:3434"
     volumes:
-      - .env:/app/
+      - app_data:/app
     # environment:      
     #   - API_KEY=bbbb
     env_file:
@@ -29,3 +29,6 @@ services:
 
 networks:
   webnet:
+  
+volumes:
+  app_data:  # 确保这里定义了持久存储
