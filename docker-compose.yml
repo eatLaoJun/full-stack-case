@@ -7,6 +7,7 @@ services:
     ports:
       - "3434:3434"
     volumes:
+      - app_data:/app
       - ./config.yaml:/app/data
     # environment:      
     #   - API_KEY=bbbb
