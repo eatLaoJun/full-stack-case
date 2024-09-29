@@ -15,6 +15,3 @@ EXPOSE 3434
 
 # 启动应用程序
 CMD ["python", "app.py"]
-
-# 打印.env
-CMD ["cat", "/app/.env"]
