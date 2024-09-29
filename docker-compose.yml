@@ -7,7 +7,7 @@ services:
     ports:
       - "3434:3434"
     volumes:
-      - app_data:/app
+      - app_data:/app/data
     # environment:      
     #   - API_KEY=bbbb
     env_file:
