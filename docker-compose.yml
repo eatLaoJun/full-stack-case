@@ -8,7 +8,7 @@ services:
       - "3434:3434"
     volumes:
       - app_data:/app
-      - ./config.yaml:/app/data
+      - ./config.yaml:/app/data/config.yaml
     # environment:      
     #   - API_KEY=bbbb
     env_file:
